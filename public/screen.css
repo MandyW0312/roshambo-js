@@ -13,7 +13,6 @@ body {
   /* background-repeat: no-repeat; */
   background-size: 100%;
   background-color: #38a3a5;
-  /* color: #c7f9cc; */
 }
 
 header {
@@ -21,6 +20,11 @@ header {
   background-color: #22577a;
   padding: 1rem;
   color: #c7f9cc;
+}
+
+section button {
+  text-align: center;
+  border-style: none;
 }
 
 main {
@@ -58,6 +62,10 @@ fieldset {
   border: 2px solid #80ed99;
   border-radius: 2rem;
   color: #810963;
+}
+
+section h3 {
+  display: none;
 }
 
 section h2,

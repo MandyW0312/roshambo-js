@@ -1,53 +1,123 @@
 function main() {
-  const player1Rock = document.querySelector('section.player1 button.rock')
-  const player1Paper = document.querySelector('section.player1 button.paper')
-  const player1Scissors = document.querySelector(
-    'section.player1 button.scissors'
-  )
-  const player2Rock = document.querySelector('section.player2 button.rock')
-  const player2Paper = document.querySelector('section.player2 button.paper')
-  const player2Scissors = document.querySelector(
-    'section.player2 button.scissors'
-  )
+  // Declaring the choices
+  const player1Rock = document.querySelector('section.player1 i.rock')
+  player1Rock.addEventListener('click', clickPlayer1Rock)
+  const player1Paper = document.querySelector('section.player1 i.paper')
+  player1Paper.addEventListener('click', clickPlayer1Paper)
+  const player1Scissors = document.querySelector('section.player1 i.scissors')
+  player1Scissors.addEventListener('click', clickPlayer1Scissors)
 
-  function clickPlayer1(event) {
-    const player1Choice = event.target.value
-    // If you hit rock, update empty html element to rock but don't print it out
-    // Want to Hide all of the buttons or make it to where Player 2 doesn't see Player 1's choice
-    // Switch to Player 2
+  const player2Rock = document.querySelector('section.player2 i.rock')
+  player2Rock.addEventListener('click', clickPlayer2Rock)
+  const player2Paper = document.querySelector('section.player2 i.paper')
+  player2Paper.addEventListener('click', clickPlayer2Paper)
+  const player2Scissors = document.querySelector('section.player2 i.scissors')
+  player2Scissors.addEventListener('click', clickPlayer2Scissors)
+
+  // Player 1 Clicks
+  function clickPlayer1Rock(event) {
+    const player1Choice = document.querySelector('section.player1 h3')
+    player1Choice.textContent = 'rock'
+    const chosen = document.querySelector('section.player1 h4')
+    chosen.textContent = 'Has Chosen'
   }
 
-  function clickPlayer2(event) {
-    const player1Choice = event.target.value
+  function clickPlayer1Paper(event) {
+    const player1Choice = document.querySelector('section.player1 h3')
+    player1Choice.textContent = 'paper'
+    const chosen = document.querySelector('section.player1 h4')
+    chosen.textContent = 'Has Chosen'
   }
 
-  function gameRules() {
-    if (player1Choice === player2Choice) {
-      window.alert('It was a Draw!')
+  function clickPlayer1Scissors(event) {
+    const player1Choice = document.querySelector('section.player1 h3')
+    player1Choice.textContent = 'scissors'
+    const chosen = document.querySelector('section.player1 h4')
+    chosen.textContent = 'Has Chosen'
+  }
+
+  // Player 2 Clicks
+  function clickPlayer2Rock(event) {
+    const player2Choice = document.querySelector('section.player2 h3')
+    player2Choice.textContent = 'rock'
+    const chosen = document.querySelector('section.player2 h4')
+    chosen.textContent = 'Has Chosen'
+  }
+
+  function clickPlayer2Paper(event) {
+    const player2Choice = document.querySelector('section.player2 h3')
+    player2Choice.textContent = 'paper'
+    const chosen = document.querySelector('section.player2 h4')
+    chosen.textContent = 'Has Chosen'
+  }
+
+  function clickPlayer2Scissors(event) {
+    const player2Choice = document.querySelector('section.player2 h3')
+    player2Choice.textContent = 'scissors'
+    const chosen = document.querySelector('section.player2 h4')
+    chosen.textContent = 'Has Chosen'
+  }
+
+  // Game Play
+  let player1Wins = 0
+  let player2Wins = 0
+  const winnerButton = document.querySelector('section button.winner')
+  function gameRules(event) {
+    const player1C = document.querySelector('section.player1 h3')
+    const p1Choice = player1C.textContent
+    const player2C = document.querySelector('section.player2 h3')
+    const p2Choice = player2C.textContent
+    if (p1Choice === p2Choice) {
+      return window.alert('It was a Draw!')
     }
     if (
-      (player1Choice === 'rock' && player2Choice === 'scissors') ||
-      (player1Choice === 'scissors' && player2Choice === 'paper') ||
-      (player1Choice === 'paper' && player2Choice === 'rock')
+      (p1Choice === 'rock' && p2Choice === 'scissors') ||
+      (p1Choice === 'scissors' && p2Choice === 'paper') ||
+      (p1Choice === 'paper' && p2Choice === 'rock')
     ) {
-      window.alert('Player 1 Wins!')
+      player1Wins++
+      const player1WonGames = document.querySelector('section.player1 footer')
+      player1WonGames.textContent = `Games Won: ${player1Wins}`
+      return window.alert('Player 1 Wins!')
     }
     if (
-      (player2Choice === 'rock' && player1Choice === 'scissors') ||
-      (player2Choice === 'scissors' && player1Choice === 'paper') ||
-      (player2Choice === 'paper' && player1Choice === 'rock')
+      (p2Choice === 'rock' && p1Choice === 'scissors') ||
+      (p2Choice === 'scissors' && p1Choice === 'paper') ||
+      (p2Choice === 'paper' && p1Choice === 'rock')
     ) {
-      window.alert('Player 2 Wins!')
+      player2Wins++
+      const player2WonGames = document.querySelector('section.player2 footer')
+      player2WonGames.textContent = `Games Won: ${player2Wins}`
+      return window.alert('Player 2 Wins!')
     }
   }
+  winnerButton.addEventListener('click', gameRules)
 
-  player1Rock.addEventListener('click', clickPlayer1)
-  player1Paper.addEventListener('click', clickPlayer1)
-  player1Scissors.addEventListener('click', clickPlayer1)
+  // Play Again Button
+  const playAgainButton = document.querySelector('section button.again')
+  function againButtonClick(event) {
+    const chosen1Again = document.querySelector('section.player1 h4')
+    chosen1Again.textContent = ''
+    const chosen2Again = document.querySelector('section.player2 h4')
+    chosen2Again.textContent = ''
+  }
+  playAgainButton.addEventListener('click', againButtonClick)
 
-  player2Rock.addEventListener('click', clickPlayer2)
-  player2Paper.addEventListener('click', clickPlayer2)
-  player2Scissors.addEventListener('click', clickPlayer2)
+  // Reset Button
+  const resetButton = document.querySelector('section button.reset')
+  function resetButtonClick(event) {
+    player1Wins = 0
+    const player1Score = document.querySelector('section.player1 footer')
+    player1Score.textContent = 'Games Won:'
+    const chosen1Again = document.querySelector('section.player1 h4')
+    chosen1Again.textContent = ''
+    player2Wins = 0
+    const player2Score = document.querySelector('section.player2 footer')
+    player2Score.textContent = 'Games Won:'
+    const chosen2Again = document.querySelector('section.player2 h4')
+    chosen2Again.textContent = ''
+  }
+  resetButton.addEventListener('click', resetButtonClick)
 }
 
 document.addEventListener('DOMContentLoaded', main)
