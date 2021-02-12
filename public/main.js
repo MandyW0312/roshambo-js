@@ -23,82 +23,66 @@ function main() {
   player2Spock.addEventListener('click', clickPlayer2Spock)
 
   // Player 1 Clicks
-  function clickPlayer1Rock(event) {
-    const player1Choice = document.querySelector('section.player1 h3')
-    player1Choice.textContent = 'rock'
+  function player1Choice(choice) {
+    const clickedOn = document.querySelector('section.player1 h3')
+    clickedOn.textContent = choice
     const chosen = document.querySelector('section.player1 h4')
     chosen.textContent = 'Has Chosen'
   }
 
-  function clickPlayer1Paper(event) {
-    const player1Choice = document.querySelector('section.player1 h3')
-    player1Choice.textContent = 'paper'
-    const chosen = document.querySelector('section.player1 h4')
-    chosen.textContent = 'Has Chosen'
+  function clickPlayer1Rock() {
+    player1Choice('rock')
   }
 
-  function clickPlayer1Scissors(event) {
-    const player1Choice = document.querySelector('section.player1 h3')
-    player1Choice.textContent = 'scissors'
-    const chosen = document.querySelector('section.player1 h4')
-    chosen.textContent = 'Has Chosen'
+  function clickPlayer1Paper() {
+    player1Choice('paper')
   }
 
-  function clickPlayer1Lizard(event) {
-    const player1Choice = document.querySelector('section.player1 h3')
-    player1Choice.textContent = 'lizard'
-    const chosen = document.querySelector('section.player1 h4')
-    chosen.textContent = 'Has Chosen'
+  function clickPlayer1Scissors() {
+    player1Choice('scissors')
   }
 
-  function clickPlayer1Spock(event) {
-    const player1Choice = document.querySelector('section.player1 h3')
-    player1Choice.textContent = 'spock'
-    const chosen = document.querySelector('section.player1 h4')
-    chosen.textContent = 'Has Chosen'
+  function clickPlayer1Lizard() {
+    player1Choice('lizard')
+  }
+
+  function clickPlayer1Spock() {
+    player1Choice('spock')
   }
 
   // Player 2 Clicks
-  function clickPlayer2Rock(event) {
-    const player2Choice = document.querySelector('section.player2 h3')
-    player2Choice.textContent = 'rock'
+  function player2Choice(choice) {
+    const clickedOn = document.querySelector('section.player2 h3')
+    clickedOn.textContent = choice
     const chosen = document.querySelector('section.player2 h4')
     chosen.textContent = 'Has Chosen'
   }
 
-  function clickPlayer2Paper(event) {
-    const player2Choice = document.querySelector('section.player2 h3')
-    player2Choice.textContent = 'paper'
-    const chosen = document.querySelector('section.player2 h4')
-    chosen.textContent = 'Has Chosen'
+  function clickPlayer2Rock() {
+    player2Choice('rock')
   }
 
-  function clickPlayer2Scissors(event) {
-    const player2Choice = document.querySelector('section.player2 h3')
-    player2Choice.textContent = 'scissors'
-    const chosen = document.querySelector('section.player2 h4')
-    chosen.textContent = 'Has Chosen'
+  function clickPlayer2Paper() {
+    player2Choice('paper')
   }
 
-  function clickPlayer2Lizard(event) {
-    const player2Choice = document.querySelector('section.player2 h3')
-    player2Choice.textContent = 'lizard'
-    const chosen = document.querySelector('section.player2 h4')
-    chosen.textContent = 'Has Chosen'
+  function clickPlayer2Scissors() {
+    player2Choice('scissors')
   }
 
-  function clickPlayer2Spock(event) {
-    const player2Choice = document.querySelector('section.player2 h3')
-    player2Choice.textContent = 'spock'
-    const chosen = document.querySelector('section.player2 h4')
-    chosen.textContent = 'Has Chosen'
+  function clickPlayer2Lizard() {
+    player2Choice('lizard')
+  }
+
+  function clickPlayer2Spock() {
+    player2Choice('spock')
   }
 
   // Game Play
   let player1Wins = 0
   let player2Wins = 0
   const winnerButton = document.querySelector('section button.winner')
-  function gameRules(event) {
+  function gameRules() {
     const player1C = document.querySelector('section.player1 h3')
     const p1Choice = player1C.textContent
     const player2C = document.querySelector('section.player2 h3')
@@ -133,7 +117,7 @@ function main() {
 
   // Play Again Button
   const playAgainButton = document.querySelector('section button.again')
-  function againButtonClick(event) {
+  function againButtonClick() {
     const chosen1Again = document.querySelector('section.player1 h4')
     chosen1Again.textContent = ''
     const chosen2Again = document.querySelector('section.player2 h4')
@@ -143,7 +127,7 @@ function main() {
 
   // Reset Button
   const resetButton = document.querySelector('section button.reset')
-  function resetButtonClick(event) {
+  function resetButtonClick() {
     player1Wins = 0
     const player1Score = document.querySelector('section.player1 footer')
     player1Score.textContent = 'Games Won:'
