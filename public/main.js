@@ -31,23 +31,53 @@ function main() {
   }
 
   function clickPlayer1Rock() {
-    player1Choice('rock')
+    const firstPlayer = document.querySelector('section.player1 h3')
+    const firstPlayerChoice = firstPlayer.textContent
+    if (firstPlayerChoice === '') {
+      player1Choice('rock')
+    } else {
+      window.alert('You can not choose again')
+    }
   }
 
   function clickPlayer1Paper() {
-    player1Choice('paper')
+    const firstPlayer = document.querySelector('section.player1 h3')
+    const firstPlayerChoice = firstPlayer.textContent
+    if (firstPlayerChoice === '') {
+      player1Choice('paper')
+    } else {
+      window.alert('You can not choose again')
+    }
   }
 
   function clickPlayer1Scissors() {
-    player1Choice('scissors')
+    const firstPlayer = document.querySelector('section.player1 h3')
+    const firstPlayerChoice = firstPlayer.textContent
+    if (firstPlayerChoice === '') {
+      player1Choice('scissors')
+    } else {
+      window.alert('You can not choose again')
+    }
   }
 
   function clickPlayer1Lizard() {
-    player1Choice('lizard')
+    const firstPlayer = document.querySelector('section.player1 h3')
+    const firstPlayerChoice = firstPlayer.textContent
+    if (firstPlayerChoice === '') {
+      player1Choice('lizard')
+    } else {
+      window.alert('You can not choose again')
+    }
   }
 
   function clickPlayer1Spock() {
-    player1Choice('spock')
+    const firstPlayer = document.querySelector('section.player1 h3')
+    const firstPlayerChoice = firstPlayer.textContent
+    if (firstPlayerChoice === '') {
+      player1Choice('spock')
+    } else {
+      window.alert('You can not choose again')
+    }
   }
 
   // Player 2 Clicks
@@ -59,23 +89,53 @@ function main() {
   }
 
   function clickPlayer2Rock() {
-    player2Choice('rock')
+    const secondPlayer = document.querySelector('section.player2 h3')
+    const secondPlayerChoice = secondPlayer.textContent
+    if (secondPlayerChoice === '') {
+      player2Choice('rock')
+    } else {
+      window.alert('You can not choose again')
+    }
   }
 
   function clickPlayer2Paper() {
-    player2Choice('paper')
+    const secondPlayer = document.querySelector('section.player2 h3')
+    const secondPlayerChoice = secondPlayer.textContent
+    if (secondPlayerChoice === '') {
+      player2Choice('paper')
+    } else {
+      window.alert('You can not choose again')
+    }
   }
 
   function clickPlayer2Scissors() {
-    player2Choice('scissors')
+    const secondPlayer = document.querySelector('section.player2 h3')
+    const secondPlayerChoice = secondPlayer.textContent
+    if (secondPlayerChoice === '') {
+      player2Choice('scissors')
+    } else {
+      window.alert('You can not choose again')
+    }
   }
 
   function clickPlayer2Lizard() {
-    player2Choice('lizard')
+    const secondPlayer = document.querySelector('section.player2 h3')
+    const secondPlayerChoice = secondPlayer.textContent
+    if (secondPlayerChoice === '') {
+      player2Choice('lizard')
+    } else {
+      window.alert('You can not choose again')
+    }
   }
 
   function clickPlayer2Spock() {
-    player2Choice('spock')
+    const secondPlayer = document.querySelector('section.player2 h3')
+    const secondPlayerChoice = secondPlayer.textContent
+    if (secondPlayerChoice === '') {
+      player2Choice('spock')
+    } else {
+      window.alert('You can not choose again')
+    }
   }
 
   // Game Play
@@ -88,7 +148,9 @@ function main() {
     const player2C = document.querySelector('section.player2 h3')
     const p2Choice = player2C.textContent
     if (p1Choice === p2Choice) {
-      return window.alert('It was a Draw!')
+      const winnerOfGame = document.querySelector('section.gameWinner p')
+      winnerOfGame.textContent = 'It was a Draw!'
+      return
     }
     if (
       (p1Choice === 'rock' && p2Choice === 'scissors') ||
@@ -105,12 +167,16 @@ function main() {
       player1Wins++
       const player1WonGames = document.querySelector('section.player1 footer')
       player1WonGames.textContent = `Games Won: ${player1Wins}`
-      return window.alert('Player 1 Wins!')
+      const winnerOfGame = document.querySelector('section.gameWinner p')
+      winnerOfGame.textContent = 'Player 1 Wins!'
+      return
     } else {
       player2Wins++
       const player2WonGames = document.querySelector('section.player2 footer')
       player2WonGames.textContent = `Games Won: ${player2Wins}`
-      return window.alert('Player 2 Wins!')
+      const winnerOfGame = document.querySelector('section.gameWinner p')
+      winnerOfGame.textContent = 'Player 2 Wins!'
+      return
     }
   }
   winnerButton.addEventListener('click', gameRules)
@@ -120,8 +186,16 @@ function main() {
   function againButtonClick() {
     const chosen1Again = document.querySelector('section.player1 h4')
     chosen1Again.textContent = ''
+    const userChoice1 = document.querySelector('section.player1 h3')
+    userChoice1.textContent = ''
+
     const chosen2Again = document.querySelector('section.player2 h4')
     chosen2Again.textContent = ''
+    const userChoice2 = document.querySelector('section.player2 h3')
+    userChoice2.textContent = ''
+
+    const clearWinner = document.querySelector('section.gameWinner p')
+    clearWinner.textContent = ''
   }
   playAgainButton.addEventListener('click', againButtonClick)
 
@@ -133,11 +207,19 @@ function main() {
     player1Score.textContent = 'Games Won:'
     const chosen1Again = document.querySelector('section.player1 h4')
     chosen1Again.textContent = ''
+    const userChoice1 = document.querySelector('section.player1 h3')
+    userChoice1.textContent = ''
+
     player2Wins = 0
     const player2Score = document.querySelector('section.player2 footer')
     player2Score.textContent = 'Games Won:'
     const chosen2Again = document.querySelector('section.player2 h4')
     chosen2Again.textContent = ''
+    const userChoice2 = document.querySelector('section.player2 h3')
+    userChoice2.textContent = ''
+
+    const clearWinner = document.querySelector('section.gameWinner p')
+    clearWinner.textContent = ''
   }
   resetButton.addEventListener('click', resetButtonClick)
 }

@@ -22,11 +22,6 @@ header {
   color: #c7f9cc;
 }
 
-section button {
-  text-align: center;
-  border-style: none;
-}
-
 main {
   display: flex;
   flex-wrap: wrap;
@@ -68,9 +63,20 @@ section h3 {
   display: none;
 }
 
-section h2,
-section p {
+section h2 {
   text-align: center;
+}
+
+section p {
+  font-size: 30px;
+}
+
+section.buttons {
+  border: none;
+  flex-direction: row;
+}
+section.gameWinner {
+  border: none;
 }
 
 footer {
