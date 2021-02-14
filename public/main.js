@@ -1,26 +1,26 @@
 function main() {
   // Declaring the choices
-  const player1Rock = document.querySelector('section.player1 i.rock')
-  player1Rock.addEventListener('click', clickPlayer1Rock)
-  const player1Paper = document.querySelector('section.player1 i.paper')
-  player1Paper.addEventListener('click', clickPlayer1Paper)
-  const player1Scissors = document.querySelector('section.player1 i.scissors')
-  player1Scissors.addEventListener('click', clickPlayer1Scissors)
-  const player1Lizard = document.querySelector('section.player1 i.lizard')
-  player1Lizard.addEventListener('click', clickPlayer1Lizard)
-  const player1Spock = document.querySelector('section.player1 i.spock')
-  player1Spock.addEventListener('click', clickPlayer1Spock)
+  const player1Posh = document.querySelector('section.player1 img.posh')
+  player1Posh.addEventListener('click', clickPlayer1Posh)
+  const player1Baby = document.querySelector('section.player1 img.baby')
+  player1Baby.addEventListener('click', clickPlayer1Baby)
+  const player1Ginger = document.querySelector('section.player1 img.ginger')
+  player1Ginger.addEventListener('click', clickPlayer1Ginger)
+  const player1Scary = document.querySelector('section.player1 img.scary')
+  player1Scary.addEventListener('click', clickPlayer1Scary)
+  const player1Sporty = document.querySelector('section.player1 img.sporty')
+  player1Sporty.addEventListener('click', clickPlayer1Sporty)
 
-  const player2Rock = document.querySelector('section.player2 i.rock')
-  player2Rock.addEventListener('click', clickPlayer2Rock)
-  const player2Paper = document.querySelector('section.player2 i.paper')
-  player2Paper.addEventListener('click', clickPlayer2Paper)
-  const player2Scissors = document.querySelector('section.player2 i.scissors')
-  player2Scissors.addEventListener('click', clickPlayer2Scissors)
-  const player2Lizard = document.querySelector('section.player2 i.lizard')
-  player2Lizard.addEventListener('click', clickPlayer2Lizard)
-  const player2Spock = document.querySelector('section.player2 i.spock')
-  player2Spock.addEventListener('click', clickPlayer2Spock)
+  const player2Posh = document.querySelector('section.player2 img.posh')
+  player2Posh.addEventListener('click', clickPlayer2Posh)
+  const player2Baby = document.querySelector('section.player2 img.baby')
+  player2Baby.addEventListener('click', clickPlayer2Baby)
+  const player2Ginger = document.querySelector('section.player2 img.ginger')
+  player2Ginger.addEventListener('click', clickPlayer2Ginger)
+  const player2Scary = document.querySelector('section.player2 img.scary')
+  player2Scary.addEventListener('click', clickPlayer2Scary)
+  const player2Sporty = document.querySelector('section.player2 img.sporty')
+  player2Sporty.addEventListener('click', clickPlayer2Sporty)
 
   // Player 1 Clicks
   function player1Choice(choice) {
@@ -30,51 +30,51 @@ function main() {
     chosen.textContent = 'Has Chosen'
   }
 
-  function clickPlayer1Rock() {
+  function clickPlayer1Posh() {
     const firstPlayer = document.querySelector('section.player1 h3')
     const firstPlayerChoice = firstPlayer.textContent
     if (firstPlayerChoice === '') {
-      player1Choice('rock')
+      player1Choice('posh')
     } else {
       window.alert('You can not choose again')
     }
   }
 
-  function clickPlayer1Paper() {
+  function clickPlayer1Baby() {
     const firstPlayer = document.querySelector('section.player1 h3')
     const firstPlayerChoice = firstPlayer.textContent
     if (firstPlayerChoice === '') {
-      player1Choice('paper')
+      player1Choice('baby')
     } else {
       window.alert('You can not choose again')
     }
   }
 
-  function clickPlayer1Scissors() {
+  function clickPlayer1Ginger() {
     const firstPlayer = document.querySelector('section.player1 h3')
     const firstPlayerChoice = firstPlayer.textContent
     if (firstPlayerChoice === '') {
-      player1Choice('scissors')
+      player1Choice('ginger')
     } else {
       window.alert('You can not choose again')
     }
   }
 
-  function clickPlayer1Lizard() {
+  function clickPlayer1Scary() {
     const firstPlayer = document.querySelector('section.player1 h3')
     const firstPlayerChoice = firstPlayer.textContent
     if (firstPlayerChoice === '') {
-      player1Choice('lizard')
+      player1Choice('scary')
     } else {
       window.alert('You can not choose again')
     }
   }
 
-  function clickPlayer1Spock() {
+  function clickPlayer1Sporty() {
     const firstPlayer = document.querySelector('section.player1 h3')
     const firstPlayerChoice = firstPlayer.textContent
     if (firstPlayerChoice === '') {
-      player1Choice('spock')
+      player1Choice('sporty')
     } else {
       window.alert('You can not choose again')
     }
@@ -88,51 +88,51 @@ function main() {
     chosen.textContent = 'Has Chosen'
   }
 
-  function clickPlayer2Rock() {
+  function clickPlayer2Posh() {
     const secondPlayer = document.querySelector('section.player2 h3')
     const secondPlayerChoice = secondPlayer.textContent
     if (secondPlayerChoice === '') {
-      player2Choice('rock')
+      player2Choice('posh')
     } else {
       window.alert('You can not choose again')
     }
   }
 
-  function clickPlayer2Paper() {
+  function clickPlayer2Baby() {
     const secondPlayer = document.querySelector('section.player2 h3')
     const secondPlayerChoice = secondPlayer.textContent
     if (secondPlayerChoice === '') {
-      player2Choice('paper')
+      player2Choice('baby')
     } else {
       window.alert('You can not choose again')
     }
   }
 
-  function clickPlayer2Scissors() {
+  function clickPlayer2Ginger() {
     const secondPlayer = document.querySelector('section.player2 h3')
     const secondPlayerChoice = secondPlayer.textContent
     if (secondPlayerChoice === '') {
-      player2Choice('scissors')
+      player2Choice('ginger')
     } else {
       window.alert('You can not choose again')
     }
   }
 
-  function clickPlayer2Lizard() {
+  function clickPlayer2Scary() {
     const secondPlayer = document.querySelector('section.player2 h3')
     const secondPlayerChoice = secondPlayer.textContent
     if (secondPlayerChoice === '') {
-      player2Choice('lizard')
+      player2Choice('scary')
     } else {
       window.alert('You can not choose again')
     }
   }
 
-  function clickPlayer2Spock() {
+  function clickPlayer2Sporty() {
     const secondPlayer = document.querySelector('section.player2 h3')
     const secondPlayerChoice = secondPlayer.textContent
     if (secondPlayerChoice === '') {
-      player2Choice('spock')
+      player2Choice('sporty')
     } else {
       window.alert('You can not choose again')
     }
@@ -153,16 +153,16 @@ function main() {
       return
     }
     if (
-      (p1Choice === 'rock' && p2Choice === 'scissors') ||
-      (p1Choice === 'rock' && p2Choice === 'lizard') ||
-      (p1Choice === 'scissors' && p2Choice === 'paper') ||
-      (p1Choice === 'scissors' && p2Choice === 'lizard') ||
-      (p1Choice === 'paper' && p2Choice === 'spock') ||
-      (p1Choice === 'paper' && p2Choice === 'rock') ||
-      (p1Choice === 'spock' && p2Choice === 'scissors') ||
-      (p1Choice === 'spock' && p2Choice === 'rock') ||
-      (p1Choice === 'lizard' && p2Choice === 'spock') ||
-      (p1Choice === 'lizard' && p2Choice === 'paper')
+      (p1Choice === 'posh' && p2Choice === 'ginger') ||
+      (p1Choice === 'posh' && p2Choice === 'scary') ||
+      (p1Choice === 'ginger' && p2Choice === 'baby') ||
+      (p1Choice === 'ginger' && p2Choice === 'scary') ||
+      (p1Choice === 'baby' && p2Choice === 'sporty') ||
+      (p1Choice === 'baby' && p2Choice === 'posh') ||
+      (p1Choice === 'sporty' && p2Choice === 'ginger') ||
+      (p1Choice === 'sporty' && p2Choice === 'posh') ||
+      (p1Choice === 'scary' && p2Choice === 'sporty') ||
+      (p1Choice === 'scary' && p2Choice === 'baby')
     ) {
       player1Wins++
       const player1WonGames = document.querySelector('section.player1 footer')
