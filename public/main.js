@@ -34,7 +34,7 @@ function main() {
     const firstPlayer = document.querySelector('section.player1 h3')
     const firstPlayerChoice = firstPlayer.textContent
     if (firstPlayerChoice === '') {
-      player1Choice('posh')
+      player1Choice('Posh Spice')
     } else {
       window.alert('You can not choose again')
     }
@@ -44,7 +44,7 @@ function main() {
     const firstPlayer = document.querySelector('section.player1 h3')
     const firstPlayerChoice = firstPlayer.textContent
     if (firstPlayerChoice === '') {
-      player1Choice('baby')
+      player1Choice('Baby Spice')
     } else {
       window.alert('You can not choose again')
     }
@@ -54,7 +54,7 @@ function main() {
     const firstPlayer = document.querySelector('section.player1 h3')
     const firstPlayerChoice = firstPlayer.textContent
     if (firstPlayerChoice === '') {
-      player1Choice('ginger')
+      player1Choice('Ginger Spice')
     } else {
       window.alert('You can not choose again')
     }
@@ -64,7 +64,7 @@ function main() {
     const firstPlayer = document.querySelector('section.player1 h3')
     const firstPlayerChoice = firstPlayer.textContent
     if (firstPlayerChoice === '') {
-      player1Choice('scary')
+      player1Choice('Scary Spice')
     } else {
       window.alert('You can not choose again')
     }
@@ -74,7 +74,7 @@ function main() {
     const firstPlayer = document.querySelector('section.player1 h3')
     const firstPlayerChoice = firstPlayer.textContent
     if (firstPlayerChoice === '') {
-      player1Choice('sporty')
+      player1Choice('Sporty Spice')
     } else {
       window.alert('You can not choose again')
     }
@@ -92,7 +92,7 @@ function main() {
     const secondPlayer = document.querySelector('section.player2 h3')
     const secondPlayerChoice = secondPlayer.textContent
     if (secondPlayerChoice === '') {
-      player2Choice('posh')
+      player2Choice('Posh Spice')
     } else {
       window.alert('You can not choose again')
     }
@@ -102,7 +102,7 @@ function main() {
     const secondPlayer = document.querySelector('section.player2 h3')
     const secondPlayerChoice = secondPlayer.textContent
     if (secondPlayerChoice === '') {
-      player2Choice('baby')
+      player2Choice('Baby Spice')
     } else {
       window.alert('You can not choose again')
     }
@@ -112,7 +112,7 @@ function main() {
     const secondPlayer = document.querySelector('section.player2 h3')
     const secondPlayerChoice = secondPlayer.textContent
     if (secondPlayerChoice === '') {
-      player2Choice('ginger')
+      player2Choice('Ginger Spice')
     } else {
       window.alert('You can not choose again')
     }
@@ -122,7 +122,7 @@ function main() {
     const secondPlayer = document.querySelector('section.player2 h3')
     const secondPlayerChoice = secondPlayer.textContent
     if (secondPlayerChoice === '') {
-      player2Choice('scary')
+      player2Choice('Scary Spice')
     } else {
       window.alert('You can not choose again')
     }
@@ -132,7 +132,7 @@ function main() {
     const secondPlayer = document.querySelector('section.player2 h3')
     const secondPlayerChoice = secondPlayer.textContent
     if (secondPlayerChoice === '') {
-      player2Choice('sporty')
+      player2Choice('Sporty Spice')
     } else {
       window.alert('You can not choose again')
     }
@@ -153,29 +153,29 @@ function main() {
       return
     }
     if (
-      (p1Choice === 'posh' && p2Choice === 'ginger') ||
-      (p1Choice === 'posh' && p2Choice === 'scary') ||
-      (p1Choice === 'ginger' && p2Choice === 'baby') ||
-      (p1Choice === 'ginger' && p2Choice === 'scary') ||
-      (p1Choice === 'baby' && p2Choice === 'sporty') ||
-      (p1Choice === 'baby' && p2Choice === 'posh') ||
-      (p1Choice === 'sporty' && p2Choice === 'ginger') ||
-      (p1Choice === 'sporty' && p2Choice === 'posh') ||
-      (p1Choice === 'scary' && p2Choice === 'sporty') ||
-      (p1Choice === 'scary' && p2Choice === 'baby')
+      (p1Choice === 'Posh Spice' && p2Choice === 'Ginger Spice') ||
+      (p1Choice === 'Posh Spice' && p2Choice === 'Scary Spice') ||
+      (p1Choice === 'Ginger Spice' && p2Choice === 'Baby Spice') ||
+      (p1Choice === 'Ginger Spice' && p2Choice === 'Scary Spice') ||
+      (p1Choice === 'Baby Spice' && p2Choice === 'Sporty Spice') ||
+      (p1Choice === 'Baby Spice' && p2Choice === 'Posh Spice') ||
+      (p1Choice === 'Sporty Spice' && p2Choice === 'Ginger Spice') ||
+      (p1Choice === 'Sporty Spice' && p2Choice === 'Posh Spice') ||
+      (p1Choice === 'Scary Spice' && p2Choice === 'Sporty Spice') ||
+      (p1Choice === 'Scary Spice' && p2Choice === 'Baby Spice')
     ) {
       player1Wins++
       const player1WonGames = document.querySelector('section.player1 footer')
       player1WonGames.textContent = `Games Won: ${player1Wins}`
       const winnerOfGame = document.querySelector('section.gameWinner p')
-      winnerOfGame.textContent = 'Player 1 Wins!'
+      winnerOfGame.textContent = `Player 1 Wins! ${p1Choice} beats ${p2Choice}!`
       return
     } else {
       player2Wins++
       const player2WonGames = document.querySelector('section.player2 footer')
       player2WonGames.textContent = `Games Won: ${player2Wins}`
       const winnerOfGame = document.querySelector('section.gameWinner p')
-      winnerOfGame.textContent = 'Player 2 Wins!'
+      winnerOfGame.textContent = `Player 2 Wins! ${p2Choice} beats ${p1Choice}!`
       return
     }
   }
