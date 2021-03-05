@@ -6,5 +6,7 @@ The objective of this project was to create a classic Rock, Paper, Scissors game
 
 This tribute to the Spice Girls used the following technologies:
 
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
